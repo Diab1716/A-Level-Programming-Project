@@ -13,6 +13,8 @@
 		B6060CD128D1F2B600776868 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6060CD028D1F2B600776868 /* Preview Assets.xcassets */; };
 		B6060CDC28D1F2B700776868 /* A_Level_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CDB28D1F2B700776868 /* A_Level_SimulatorTests.swift */; };
 		B6060CE728D1F2B700776868 /* A_Level_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CE628D1F2B700776868 /* A_Level_SimulatorUITests.swift */; };
+		B6060CF828D1F32C00776868 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CF728D1F32C00776868 /* Model.swift */; };
+		B6060CFD28D1F34100776868 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CFC28D1F34100776868 /* SimulationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		B6060CE228D1F2B700776868 /* A Level SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Level SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6060CE628D1F2B700776868 /* A_Level_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Level_SimulatorUITests.swift; sourceTree = "<group>"; };
 		B6060CE828D1F2B700776868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6060CF728D1F32C00776868 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B6060CFC28D1F34100776868 /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				B6060CC928D1F2AF00776868 /* A_Level_SimulatorApp.swift */,
 				B6060CCB28D1F2AF00776868 /* ContentView.swift */,
+				B6060CFC28D1F34100776868 /* SimulationView.swift */,
+				B6060CF728D1F32C00776868 /* Model.swift */,
 				B6060CCD28D1F2B600776868 /* Assets.xcassets */,
 				B6060CD228D1F2B600776868 /* Info.plist */,
 				B6060CCF28D1F2B600776868 /* Preview Content */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6060CF828D1F32C00776868 /* Model.swift in Sources */,
 				B6060CCC28D1F2AF00776868 /* ContentView.swift in Sources */,
 				B6060CCA28D1F2AF00776868 /* A_Level_SimulatorApp.swift in Sources */,
+				B6060CFD28D1F34100776868 /* SimulationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
