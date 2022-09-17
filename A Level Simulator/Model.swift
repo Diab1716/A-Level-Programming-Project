@@ -9,9 +9,6 @@ import Foundation
 import SpriteKit
 
 class SimScene: SKScene {
-    override func didMove(to view: SKView) {
-        print("Welcome to the scene")
-    }
 }
 
 

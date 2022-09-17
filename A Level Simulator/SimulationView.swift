@@ -12,7 +12,7 @@ struct SimulationView: View {
     
     var scene: SKScene {
         let scene = SimScene()
-        scene.size = CGSize(width: 216, height: 216)
+        scene.size = CGSize(width: 400, height: 216)
         scene.scaleMode = .fill
         return scene
     }
@@ -21,7 +21,7 @@ struct SimulationView: View {
     var body: some View {
         VStack{
         SpriteView(scene: self.scene)
-            .frame(width: 420, height: 250)
+            .frame(width: 400, height: 400)
             .ignoresSafeArea()
         Spacer()
         }
