@@ -6,10 +6,25 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct SimulationView: View {
+    
+    var scene: SKScene {
+        let scene = SimScene()
+        scene.size = CGSize(width: 216, height: 216)
+        scene.scaleMode = .fill
+        return scene
+    }
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+        SpriteView(scene: self.scene)
+            .frame(width: 420, height: 250)
+            .ignoresSafeArea()
+        Spacer()
+        }
     }
 }
 
