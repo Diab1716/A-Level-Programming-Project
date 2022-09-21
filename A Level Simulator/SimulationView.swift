@@ -12,8 +12,9 @@ struct SimulationView: View {
     
     var scene: SKScene {
         let scene = SimScene()
-        scene.size = CGSize(width: 400, height: 216)
+        scene.size = CGSize(width: 400, height: 400)
         scene.scaleMode = .fill
+        scene.anchorPoint = CGPoint(x:0.5,y:0.5)
         return scene
     }
     
