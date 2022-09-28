@@ -8,15 +8,16 @@
 import SwiftUI
 import SpriteKit
 
-struct ContentView: View {
+struct MenuView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+        Text("Physics Simulations")
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MenuView()
     }
 }

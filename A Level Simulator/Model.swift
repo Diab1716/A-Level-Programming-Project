@@ -7,47 +7,51 @@
 
 import Foundation
 import SpriteKit
-import SwiftUI
 
-class SimScene: SKScene, ObservableObject {
+class SimScene: SKScene{
+    
+    
+    func createBall(ballRadius: CGFloat,ballColor: UIColor, ballPosition:CGPoint,gravity:Bool,ballMass: CGFloat,ballRestitution: CGFloat,ballDamping: CGFloat) -> SKShapeNode{
+        let ball = SKShapeNode(circleOfRadius: ballRadius)
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: ballRadius)
+        ball.fillColor = ballColor
+        ball.position = ballPosition
+        ball.physicsBody?.affectedByGravity = gravity
+        ball.physicsBody?.mass = ballMass
+        ball.physicsBody?.restitution = ballRestitution
+        ball.physicsBody?.linearDamping = ballDamping
+        return ball
+    }
     
     override func didMove(to view: SKView){
-        
-        let ball_one = SKShapeNode(circleOfRadius: 20)
-        let ball_two = SKShapeNode(circleOfRadius: 20)
+    
+        let ball_one = createBall(ballRadius: 20, ballColor: .red, ballPosition: CGPoint(x:-100,y:0), gravity: false, ballMass: 1, ballRestitution: 1, ballDamping: 0)
+        let ball_two = createBall(ballRadius: 20, ballColor: .blue, ballPosition: CGPoint(x:100,y:0), gravity: false, ballMass: 1, ballRestitution: 1, ballDamping: 0)
         let ground = SKShapeNode(rectOf: CGSize( width: 400,height: 10))
-        
-        ball_one.physicsBody = SKPhysicsBody(circleOfRadius: 20)
-        ball_two.physicsBody = SKPhysicsBody(circleOfRadius: 20)
-        ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 400,height: 10))
-        
-        ball_one.fillColor = .red
-        ball_two.fillColor = .blue
         ground.fillColor = .green
-        
-        ball_one.position = CGPoint(x: -100, y: 0)
-        ball_two.position = CGPoint(x: 100, y: 0)
-        ground.position = CGPoint(x: 0, y: -22)
-        
-        ball_one.physicsBody?.affectedByGravity = false
-        ball_two.physicsBody?.affectedByGravity = false
-        ground.physicsBody?.isDynamic = false
-        
-        ball_one.physicsBody?.mass = 1
-        ball_two.physicsBody?.mass = 1
+        ground.strokeColor = .green
+        ground.position = CGPoint(x:0,y:-22)
         
         addChild(ball_one)
         addChild(ball_two)
         addChild(ground)
         
         ball_one.physicsBody?.velocity = CGVector(dx: 50,dy: 0)
-        ball_one.physicsBody?.restitution = 1
-        ball_one.physicsBody?.linearDamping = 0
         
         ball_two.physicsBody?.velocity = CGVector(dx: -50,dy: 0)
-        ball_two.physicsBody?.restitution = 1
-        ball_two.physicsBody?.linearDamping = 0
         
     }
 }
 
+class SimParameters: ObservableObject{
+    var velBallOne: Double = 0
+    var velBallTwo: Double = 0
+    var Restitution: Double = 0
+    var massBallOne: Double = 0
+    var massBallTwo: Double = 0
+    var startSim: Bool = false
+    
+    func startSimulation()->Void{
+        startSim = true
+    }
+}
