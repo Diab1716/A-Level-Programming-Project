@@ -11,7 +11,7 @@ import SwiftUI
 struct A_Level_SimulatorApp: App {
     var body: some Scene {
         WindowGroup {
-            SimulationView()
+            MenuView()
         }
     }
 }

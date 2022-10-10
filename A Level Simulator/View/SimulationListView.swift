@@ -1,5 +1,5 @@
 //
-//  SimulationListView.swift
+//  SettingsView.swift
 //  A Level Simulator
 //
 //  Created by Diab, Ahmed (HWTA) on 05/10/2022.
@@ -9,7 +9,34 @@ import SwiftUI
 
 struct SimulationListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Simulation List")
+                .font(.largeTitle)
+                .bold()
+        
+        ScrollView(){
+            
+            //One Module of the view which takes you to a specific simulation
+            NavigationLink(destination: SimulationView()){
+                HStack{
+                Text("Ball Collision")
+                Image("MenuImage")
+                        .resizable()
+                        .frame(width: 80, height: 45)
+                    }
+                }
+            
+            NavigationLink(destination: BlockOnPlaneView()){
+                HStack{
+                Text("Friction Sim")
+                Image("MenuImage")
+                        .resizable()
+                        .frame(width: 80, height: 45)
+                    }
+                }
+            
+            }
+        }
     }
 }
 
