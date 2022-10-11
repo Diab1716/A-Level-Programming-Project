@@ -14,7 +14,7 @@ struct SimulationView: View {
 
     
     //Creating scene with the desired dimensions
-    var scene = SimScene(size: CGSize(width: 400, height: 200))
+    var scene = SimScene(size: CGSize(width: 340, height: 200))
 
     
     
@@ -22,7 +22,7 @@ struct SimulationView: View {
         VStack{
             //Button to start the simulation
             Button{
-                scene.commenceSimulation(massA: parameters.massBallOne, massB: parameters.massBallTwo, velA: parameters.velBallOne, velB: parameters.velBallTwo, collisionRestitution: parameters.Restitution)}label: {
+                scene.commenceSimulation(massA: parameters.massBallOne, massB: parameters.massBallTwo, velA: parameters.velBallOne, velB: parameters.velBallTwo, collisionRestitution: parameters.Restitution, ballAngle: parameters.BallOneAngle)}label: {
                     Text("Start Simulation")
                 }
             
@@ -32,7 +32,7 @@ struct SimulationView: View {
                 }
             
             SpriteView(scene: self.scene)
-                .frame(width: 400, height: 200)
+                .frame(width: 340, height: 200)
                 .ignoresSafeArea()
             
             // Creating sliders to modify each one of the parameters.
@@ -41,6 +41,13 @@ struct SimulationView: View {
                     .foregroundColor(.black)
                 Slider(value: $parameters.velBallOne, in: 0...100)
                 Text("\(parameters.velBallOne, specifier: "%.1f")")
+                }
+            
+            HStack{
+            Text("Ball 1 Angle")
+                    .foregroundColor(.black)
+                Slider(value: $parameters.BallOneAngle, in: -90...90)
+                Text("\(parameters.BallOneAngle, specifier: "%.0f")")
                 }
             
             
@@ -56,7 +63,7 @@ struct SimulationView: View {
             Text("Ball 1 Mass     ")
                     .foregroundColor(.black)
                 Slider(value: $parameters.massBallOne, in: 0...100)
-                Text("\(parameters.massBallOne, specifier: "%.1f")")
+                Text("\(parameters.massBallOne, specifier: "%.0f")")
                 }
            
             
@@ -64,7 +71,7 @@ struct SimulationView: View {
             Text("Ball 2 Mass    ")
                     .foregroundColor(.black)
                 Slider(value: $parameters.massBallTwo, in: 0...100)
-                Text("\(parameters.massBallTwo, specifier: "%.1f")")
+                Text("\(parameters.massBallTwo, specifier: "%.0f")")
                 }
             
             

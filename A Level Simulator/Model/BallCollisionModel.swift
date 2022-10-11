@@ -8,69 +8,37 @@
 import Foundation
 import SpriteKit
 
-
 //Creating a class which will hold the contents of the simulation
 class SimScene: SKScene{
     
-    
-    // This is a function which can create a ball with various parameters and return it to me for use.
-    func createBall(ballRadius: CGFloat,ballColor: UIColor, ballPosition:CGPoint,gravity:Bool,ballMass: CGFloat,ballRestitution: CGFloat,ballDamping: CGFloat) -> SKShapeNode{
-        let ball = SKShapeNode(circleOfRadius: ballRadius)
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: ballRadius)
-        ball.fillColor = ballColor
-        ball.position = ballPosition
-        ball.physicsBody?.affectedByGravity = gravity
-        ball.physicsBody?.mass = ballMass
-        ball.physicsBody?.restitution = ballRestitution
-        ball.physicsBody?.linearDamping = ballDamping
-        ball.name = "ball"
-        return ball
-    }
-    
     //This method is used to start the moving parts of the simulation when the user presses a button.
-    func commenceSimulation(massA: CGFloat, massB: CGFloat,velA: CGFloat, velB: CGFloat, collisionRestitution: CGFloat) -> Void{
+    func commenceSimulation(massA: CGFloat, massB: CGFloat,velA: CGFloat, velB: CGFloat, collisionRestitution: CGFloat, ballAngle: CGFloat) -> Void{
         
-        //uisng the ball function to create the two balls in the simulation
-        let ball_one = createBall(ballRadius: 20, ballColor: .red, ballPosition: CGPoint(x:100,y:75), gravity: false, ballMass: massA, ballRestitution: collisionRestitution, ballDamping: 0)
-        let ball_two = createBall(ballRadius: 20, ballColor: .blue, ballPosition: CGPoint(x:300,y:75), gravity: false, ballMass: massB, ballRestitution: collisionRestitution, ballDamping: 0)
-        
+        //creating instances of the ball class
+        let ball_one = DynamicBall(ballRadius: 20, ballColor: .red, ballMass: massA, ballRestitution: collisionRestitution,ballPosition: CGPoint(x:100,y:75),gravityAffected: false)
+        let ball_two = DynamicBall(ballRadius: 20, ballColor: .red, ballMass: massB, ballRestitution: collisionRestitution,ballPosition: CGPoint(x:240,y:75),gravityAffected: false)
+    
         //adding the balls to the scene and giving them the necessary velocity vectors.
-        addChild(ball_one)
-        addChild(ball_two)
+        addChild(ball_one.shape)
+        addChild(ball_two.shape)
         
-        ball_one.physicsBody?.velocity = CGVector(dx: velA, dy: 0)
-        ball_two.physicsBody?.velocity = CGVector(dx:-velB,dy: 0)
+        ball_one.physics.velocity = CGVector(dx: velA * cos(ballAngle * .pi/180), dy: velA * sin(ballAngle * .pi/180))
+        ball_two.physics.velocity = CGVector(dx:-velB,dy: 0)
 
     }
     
     // function which clears the balls from the scene
     func clearSimulation(scene: SKScene)-> Void{
         scene.removeAllChildren()
-        
-        //rebuilding the ground in the scene.
-        let ground = SKShapeNode(rectOf: CGSize( width: 400,height: 200))
-        ground.fillColor = .gray
-        ground.strokeColor = .gray
-        ground.position = CGPoint(x:200,y:100)
-        addChild(ground)
-        
+
     }
     
-    // didMove is responisble for things that happen immediately when the simulation view is loaded
-    override func didMove(to view: SKView){
-    
-        // Adding an aesthetic ground to the scene
-        let ground = SKShapeNode(rectOf: CGSize( width: 400,height: 200))
-        ground.fillColor = .gray
-        ground.strokeColor = .gray
-        ground.position = CGPoint(x:200,y:100)
-        
-        addChild(ground)
-        
+    override func didMove(to view: SKView) {
+        self.scene?.scaleMode = .aspectFill
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        self.physicsBody?.restitution = 1
     }
 }
-
-
 // This is class of all the parameters that can be modified in the simulation.
 class SimParameters: ObservableObject{
     @Published var velBallOne: CGFloat = 0
@@ -78,5 +46,6 @@ class SimParameters: ObservableObject{
     @Published var Restitution: CGFloat = 0
     @Published var massBallOne: CGFloat = 0
     @Published var massBallTwo: CGFloat = 0
+    @Published var BallOneAngle: CGFloat = 0
     
 }
