@@ -15,14 +15,15 @@ class SimScene: SKScene{
     func commenceSimulation(massA: CGFloat, massB: CGFloat,velA: CGFloat, velB: CGFloat, collisionRestitution: CGFloat, ballAngle: CGFloat) -> Void{
         
         //creating instances of the ball class
-        let ball_one = DynamicBall(ballRadius: 20, ballColor: .red, ballMass: massA, ballRestitution: collisionRestitution,ballPosition: CGPoint(x:100,y:75),gravityAffected: false)
-        let ball_two = DynamicBall(ballRadius: 20, ballColor: .red, ballMass: massB, ballRestitution: collisionRestitution,ballPosition: CGPoint(x:240,y:75),gravityAffected: false)
+        let ball_one = DynamicBall(ballRadius: 20, ballColor: .red, ballMass: massA, ballRestitution: collisionRestitution,ballPosition: CGPoint(x:100,y:75),gravityAffected: false, magnitude: 0)
+        let ball_two = DynamicBall(ballRadius: 20, ballColor: .red, ballMass: massB, ballRestitution: collisionRestitution,ballPosition: CGPoint(x:240,y:75),gravityAffected: false, magnitude: 0)
     
         //adding the balls to the scene and giving them the necessary velocity vectors.
         addChild(ball_one.shape)
         addChild(ball_two.shape)
         
         ball_one.physics.velocity = CGVector(dx: velA * cos(ballAngle * .pi/180), dy: velA * sin(ballAngle * .pi/180))
+        ball_one.physics.angularVelocity = CGFloat(0)
         ball_two.physics.velocity = CGVector(dx:-velB,dy: 0)
 
     }

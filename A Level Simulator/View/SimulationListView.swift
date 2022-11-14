@@ -26,7 +26,7 @@ struct SimulationListView: View {
                     }
                 }
             
-            NavigationLink(destination: BlockOnPlaneView()){
+            NavigationLink(destination: CircularMotionView()){
                 HStack{
                 Text("Friction Sim")
                 Image("MenuImage")

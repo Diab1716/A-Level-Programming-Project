@@ -15,11 +15,15 @@
 		B6060CE728D1F2B700776868 /* A_Level_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CE628D1F2B700776868 /* A_Level_SimulatorUITests.swift */; };
 		B6060CF828D1F32C00776868 /* BallCollisionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CF728D1F32C00776868 /* BallCollisionModel.swift */; };
 		B6060CFD28D1F34100776868 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CFC28D1F34100776868 /* SimulationView.swift */; };
-		B60BE22228F17A4A0041FF6D /* BlockOnRampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BE22128F17A4A0041FF6D /* BlockOnRampModel.swift */; };
-		B62CC4EC28F4142600C26A5D /* BlockOnPlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC4EB28F4142600C26A5D /* BlockOnPlaneView.swift */; };
+		B60BE22228F17A4A0041FF6D /* CircularMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BE22128F17A4A0041FF6D /* CircularMotion.swift */; };
+		B62CC4EC28F4142600C26A5D /* CircularMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC4EB28F4142600C26A5D /* CircularMotionView.swift */; };
 		B62CC4EE28F41C7600C26A5D /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC4ED28F41C7600C26A5D /* Nodes.swift */; };
+		B649563E29182E7A0099995C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B649563D29182E7A0099995C /* Extensions.swift */; };
 		B67CCF7528ED9ACA00D68CB0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CCF7428ED9ACA00D68CB0 /* Settings.swift */; };
 		B67CCF7728EDA02300D68CB0 /* SimulationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CCF7628EDA02300D68CB0 /* SimulationListView.swift */; };
+		B687C1AC2922478F00538B35 /* GravitationalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B687C1AB2922478F00538B35 /* GravitationalField.swift */; };
+		B688462D291BCC850072DCA9 /* PathExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688462C291BCC850072DCA9 /* PathExperiment.swift */; };
+		B688462F291BD2A30072DCA9 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688462E291BD2A30072DCA9 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +58,15 @@
 		B6060CE828D1F2B700776868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6060CF728D1F32C00776868 /* BallCollisionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollisionModel.swift; sourceTree = "<group>"; };
 		B6060CFC28D1F34100776868 /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
-		B60BE22128F17A4A0041FF6D /* BlockOnRampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockOnRampModel.swift; sourceTree = "<group>"; };
-		B62CC4EB28F4142600C26A5D /* BlockOnPlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockOnPlaneView.swift; sourceTree = "<group>"; };
+		B60BE22128F17A4A0041FF6D /* CircularMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMotion.swift; sourceTree = "<group>"; };
+		B62CC4EB28F4142600C26A5D /* CircularMotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMotionView.swift; sourceTree = "<group>"; };
 		B62CC4ED28F41C7600C26A5D /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
+		B649563D29182E7A0099995C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B67CCF7428ED9ACA00D68CB0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B67CCF7628EDA02300D68CB0 /* SimulationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationListView.swift; sourceTree = "<group>"; };
+		B687C1AB2922478F00538B35 /* GravitationalField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravitationalField.swift; sourceTree = "<group>"; };
+		B688462C291BCC850072DCA9 /* PathExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExperiment.swift; sourceTree = "<group>"; };
+		B688462E291BD2A30072DCA9 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				B6060CFC28D1F34100776868 /* SimulationView.swift */,
-				B62CC4EB28F4142600C26A5D /* BlockOnPlaneView.swift */,
+				B688462E291BD2A30072DCA9 /* Test.swift */,
+				B62CC4EB28F4142600C26A5D /* CircularMotionView.swift */,
 				B6060CCB28D1F2AF00776868 /* MenuView.swift */,
 				B67CCF7628EDA02300D68CB0 /* SimulationListView.swift */,
 				B67CCF7428ED9ACA00D68CB0 /* Settings.swift */,
@@ -161,8 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				B6060CF728D1F32C00776868 /* BallCollisionModel.swift */,
-				B60BE22128F17A4A0041FF6D /* BlockOnRampModel.swift */,
+				B60BE22128F17A4A0041FF6D /* CircularMotion.swift */,
+				B687C1AB2922478F00538B35 /* GravitationalField.swift */,
+				B688462C291BCC850072DCA9 /* PathExperiment.swift */,
 				B62CC4ED28F41C7600C26A5D /* Nodes.swift */,
+				B649563D29182E7A0099995C /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,14 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B687C1AC2922478F00538B35 /* GravitationalField.swift in Sources */,
 				B6060CF828D1F32C00776868 /* BallCollisionModel.swift in Sources */,
 				B62CC4EE28F41C7600C26A5D /* Nodes.swift in Sources */,
 				B6060CCC28D1F2AF00776868 /* MenuView.swift in Sources */,
 				B67CCF7528ED9ACA00D68CB0 /* Settings.swift in Sources */,
+				B688462D291BCC850072DCA9 /* PathExperiment.swift in Sources */,
+				B688462F291BD2A30072DCA9 /* Test.swift in Sources */,
 				B67CCF7728EDA02300D68CB0 /* SimulationListView.swift in Sources */,
-				B62CC4EC28F4142600C26A5D /* BlockOnPlaneView.swift in Sources */,
+				B649563E29182E7A0099995C /* Extensions.swift in Sources */,
+				B62CC4EC28F4142600C26A5D /* CircularMotionView.swift in Sources */,
 				B6060CCA28D1F2AF00776868 /* A_Level_SimulatorApp.swift in Sources */,
-				B60BE22228F17A4A0041FF6D /* BlockOnRampModel.swift in Sources */,
+				B60BE22228F17A4A0041FF6D /* CircularMotion.swift in Sources */,
 				B6060CFD28D1F34100776868 /* SimulationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
