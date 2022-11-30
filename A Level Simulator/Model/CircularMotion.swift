@@ -61,6 +61,7 @@ class CircularMotion: SKScene, ObservableObject{
        
     }
     
+    //function responsible for checking and updating the orbital radius of the ball
     func updateOrbitalRadius(){
         if ball.orbitalRadius != radiusOrbit{
             ball.orbitalRadius = radiusOrbit
