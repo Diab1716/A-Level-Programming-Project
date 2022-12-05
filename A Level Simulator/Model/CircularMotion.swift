@@ -69,6 +69,7 @@ class CircularMotion: SKScene, ObservableObject{
            }
         }
     
+    //function to update the length and position of an arrow
     func updateArrow(arrow: ValueDisplay, initialRotation: CGFloat, scale: CGFloat, magnitude: CGFloat){
         arrow.sprite.size.width = scale*magnitude
         arrow.sprite.position = ball.shape.position

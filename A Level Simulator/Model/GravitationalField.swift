@@ -10,13 +10,19 @@ import SpriteKit
 
 class GravitationalField: SKScene{
     let centreMass = DynamicBall(ballRadius: 10, ballColor: .blue, ballMass: 1000000000, ballRestitution: 0, ballPosition: CGPoint(x: 0, y: 0), gravityAffected: true, magnitude: 0)
+    var touchArray: [CGPoint] = []
+    var ballArray: [DynamicBall] = []
     
     override func didMove(to view: SKView) {
+        
+        
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.anchorPoint = CGPoint(x:0.5,y:0.5)
         let field = SKFieldNode.radialGravityField()
         field.strength = 1
         field.falloff = 2
+        field.minimumRadius = 0
+        
         centreMass.addToScene(scene: self)
         centreMass.physics.isDynamic = false
         centreMass.shape.addChild(field)
@@ -40,8 +46,20 @@ class GravitationalField: SKScene{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
-        let ball = DynamicBall(ballRadius: 2, ballColor: .red, ballMass: 10, ballRestitution: 0, ballPosition: location, gravityAffected: true, magnitude: 0)
-        ball.physics.velocity = CGVector(dx: 200, dy: 0)
+        let ball = DynamicBall(ballRadius: 5, ballColor: .red, ballMass: 100, ballRestitution: 0, ballPosition: location, gravityAffected: true, magnitude: 0)
         ball.addToScene(scene: self)
+        ball.physics.isDynamic = false
+        ballArray.append(ball)
+        touchArray.append(location)
+        
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?){
+    guard let touch = touches.first else { return }
+    let location = touch.location(in: self)
+        let yVel = location.y - touchArray.last!.y
+        let xVel = location.x - touchArray.last!.x
+        ballArray.last?.physics.isDynamic = true
+        ballArray.last?.physics.velocity = CGVector(dx: xVel, dy: yVel)
     }
 }

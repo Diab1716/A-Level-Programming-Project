@@ -77,6 +77,7 @@ class OrbitBall: DynamicBall, ObservableObject{
     
 }
 
+    // This is a class to allow me to place images, specifically arrows into scenes
 class ValueDisplay{
     let sprite: SKSpriteNode
     let image: String

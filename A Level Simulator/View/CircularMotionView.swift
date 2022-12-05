@@ -17,7 +17,7 @@ struct CircularMotionView: View {
     var body: some View {
         VStack(){
         //Text Views which display the values of certain things in the simulation
-        Text("Centripetal Accelleration: \(circularMotionScene.accellerationMagnitude, specifier: "%.1f")")
+        Text("Centripetal Acceleration: \(circularMotionScene.accellerationMagnitude, specifier: "%.1f")")
             
         Text("   Centripetal Force: \(circularMotionScene.forceMagnitude, specifier: "%.1f")")
             
