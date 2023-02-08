@@ -9,7 +9,7 @@ import SwiftUI
 import SpriteKit
 
 struct CircularMotionView: View {
-    @StateObject var circularMotionScene = CircularMotion(size: CGSize(width: 340, height: 340))
+    @StateObject var circularMotionScene = CircularMotion(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
     
    
     
@@ -25,7 +25,7 @@ struct CircularMotionView: View {
         
             
             SpriteView(scene: self.circularMotionScene)
-                .frame(width: 340, height: 340)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
                 .ignoresSafeArea()
             
             //Sliders allowing the user to change the values of the velocity radius and mass of the ball
@@ -39,7 +39,7 @@ struct CircularMotionView: View {
             HStack{
             Text("Orbit Radius")
                     .foregroundColor(.black)
-                Slider(value: $circularMotionScene.radiusOrbit, in: 50...150)
+                Slider(value: $circularMotionScene.radiusOrbit, in: 50...(UIScreen.main.bounds.width)/2)
                 Text("\(circularMotionScene.radiusOrbit, specifier: "%.0f")")
                 }
             HStack{

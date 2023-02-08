@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6048DE42940C11000CAD63C /* letsJustStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6048DE32940C11000CAD63C /* letsJustStart.swift */; };
 		B6060CCA28D1F2AF00776868 /* A_Level_SimulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CC928D1F2AF00776868 /* A_Level_SimulatorApp.swift */; };
 		B6060CCC28D1F2AF00776868 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6060CCB28D1F2AF00776868 /* MenuView.swift */; };
 		B6060CCE28D1F2B600776868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6060CCD28D1F2B600776868 /* Assets.xcassets */; };
@@ -19,13 +20,16 @@
 		B62CC4EC28F4142600C26A5D /* CircularMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC4EB28F4142600C26A5D /* CircularMotionView.swift */; };
 		B62CC4EE28F41C7600C26A5D /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC4ED28F41C7600C26A5D /* Nodes.swift */; };
 		B649563E29182E7A0099995C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B649563D29182E7A0099995C /* Extensions.swift */; };
+		B66009992978217900D1CB04 /* GravitationalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B687C1AB2922478F00538B35 /* GravitationalField.swift */; };
+		B660099A297822B300D1CB04 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC4ED28F41C7600C26A5D /* Nodes.swift */; };
 		B67CCF7528ED9ACA00D68CB0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CCF7428ED9ACA00D68CB0 /* Settings.swift */; };
 		B67CCF7728EDA02300D68CB0 /* SimulationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CCF7628EDA02300D68CB0 /* SimulationListView.swift */; };
 		B682D172292E418F003D2C26 /* PendulumDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B682D171292E418F003D2C26 /* PendulumDraw.swift */; };
 		B682D176292E46B5003D2C26 /* PendulumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B682D175292E46B5003D2C26 /* PendulumView.swift */; };
 		B687C1AC2922478F00538B35 /* GravitationalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B687C1AB2922478F00538B35 /* GravitationalField.swift */; };
 		B688462D291BCC850072DCA9 /* PathExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688462C291BCC850072DCA9 /* PathExperiment.swift */; };
-		B688462F291BD2A30072DCA9 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688462E291BD2A30072DCA9 /* Test.swift */; };
+		B688462F291BD2A30072DCA9 /* GravitationalFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688462E291BD2A30072DCA9 /* GravitationalFieldView.swift */; };
+		B6C5BEE5297E95F7000A4199 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B649563D29182E7A0099995C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6048DE32940C11000CAD63C /* letsJustStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = letsJustStart.swift; sourceTree = "<group>"; };
 		B6060CC628D1F2AF00776868 /* A Level Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Level Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6060CC928D1F2AF00776868 /* A_Level_SimulatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Level_SimulatorApp.swift; sourceTree = "<group>"; };
 		B6060CCB28D1F2AF00776868 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -70,7 +75,7 @@
 		B682D175292E46B5003D2C26 /* PendulumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumView.swift; sourceTree = "<group>"; };
 		B687C1AB2922478F00538B35 /* GravitationalField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravitationalField.swift; sourceTree = "<group>"; };
 		B688462C291BCC850072DCA9 /* PathExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExperiment.swift; sourceTree = "<group>"; };
-		B688462E291BD2A30072DCA9 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		B688462E291BD2A30072DCA9 /* GravitationalFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravitationalFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B6060CFC28D1F34100776868 /* SimulationView.swift */,
-				B688462E291BD2A30072DCA9 /* Test.swift */,
+				B688462E291BD2A30072DCA9 /* GravitationalFieldView.swift */,
 				B682D175292E46B5003D2C26 /* PendulumView.swift */,
 				B62CC4EB28F4142600C26A5D /* CircularMotionView.swift */,
 				B6060CCB28D1F2AF00776868 /* MenuView.swift */,
@@ -178,6 +183,7 @@
 				B60BE22128F17A4A0041FF6D /* CircularMotion.swift */,
 				B687C1AB2922478F00538B35 /* GravitationalField.swift */,
 				B682D171292E418F003D2C26 /* PendulumDraw.swift */,
+				B6048DE32940C11000CAD63C /* letsJustStart.swift */,
 				B688462C291BCC850072DCA9 /* PathExperiment.swift */,
 				B62CC4ED28F41C7600C26A5D /* Nodes.swift */,
 				B649563D29182E7A0099995C /* Extensions.swift */,
@@ -322,8 +328,9 @@
 				B682D176292E46B5003D2C26 /* PendulumView.swift in Sources */,
 				B67CCF7528ED9ACA00D68CB0 /* Settings.swift in Sources */,
 				B688462D291BCC850072DCA9 /* PathExperiment.swift in Sources */,
-				B688462F291BD2A30072DCA9 /* Test.swift in Sources */,
+				B688462F291BD2A30072DCA9 /* GravitationalFieldView.swift in Sources */,
 				B67CCF7728EDA02300D68CB0 /* SimulationListView.swift in Sources */,
+				B6048DE42940C11000CAD63C /* letsJustStart.swift in Sources */,
 				B649563E29182E7A0099995C /* Extensions.swift in Sources */,
 				B62CC4EC28F4142600C26A5D /* CircularMotionView.swift in Sources */,
 				B6060CCA28D1F2AF00776868 /* A_Level_SimulatorApp.swift in Sources */,
@@ -336,7 +343,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66009992978217900D1CB04 /* GravitationalField.swift in Sources */,
+				B660099A297822B300D1CB04 /* Nodes.swift in Sources */,
 				B6060CDC28D1F2B700776868 /* A_Level_SimulatorTests.swift in Sources */,
+				B6C5BEE5297E95F7000A4199 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"A Level Simulator/Preview Content\"";
+				DEVELOPMENT_TEAM = U247FWQ42U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "A Level Simulator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -508,6 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"A Level Simulator/Preview Content\"";
+				DEVELOPMENT_TEAM = U247FWQ42U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "A Level Simulator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

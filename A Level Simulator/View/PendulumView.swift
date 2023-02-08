@@ -9,13 +9,17 @@ import SwiftUI
 import SpriteKit
 
 struct PendulumView: View {
-    var test = Pendulum(size: CGSize(width: 450, height: 700))
+var fieldGenerator = FieldGenerator(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
     
     
     var body: some View {
-        SpriteView(scene: self.test)
-            .frame(width: 450, height: 700)
+        VStack{
+        SpriteView(scene: self.fieldGenerator)
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
             .ignoresSafeArea()
+        
+
+        
     }
 }
 
@@ -24,4 +28,5 @@ struct PendulumView_Previews: PreviewProvider {
     static var previews: some View {
         PendulumView()
     }
+}
 }

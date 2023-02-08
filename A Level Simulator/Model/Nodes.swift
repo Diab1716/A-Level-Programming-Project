@@ -53,6 +53,8 @@ class DynamicBall{
         scene.addChild(self.shape)
     }
     
+
+    
 }
 
 
@@ -113,3 +115,17 @@ class CustomPath{
         self.shape.physicsBody = physics
     }
 }
+    
+    class PendulumNode: DynamicBall{
+        let previousNode: PendulumNode?
+        
+        init(ballRadius: CGFloat, ballColor: UIColor, ballMass: CGFloat, ballRestitution: CGFloat, ballPosition: CGPoint, gravityAffected: Bool, magnitude: CGFloat, nodeBefore: PendulumNode?) {
+            previousNode = nodeBefore
+            super.init(ballRadius: ballRadius, ballColor: ballColor, ballMass: ballMass, ballRestitution: ballRestitution, ballPosition: ballPosition, gravityAffected: gravityAffected, magnitude: magnitude)
+            }
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+    }
+

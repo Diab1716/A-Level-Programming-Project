@@ -28,7 +28,16 @@ struct SimulationListView: View {
             
             NavigationLink(destination: CircularMotionView()){
                 HStack{
-                Text("Friction Sim")
+                Text("Circular Motion")
+                Image("MenuImage")
+                        .resizable()
+                        .frame(width: 80, height: 45)
+                    }
+                }
+            
+            NavigationLink(destination: GravitationalFieldView()){
+                HStack{
+                Text("Gravitational Field")
                 Image("MenuImage")
                         .resizable()
                         .frame(width: 80, height: 45)

@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 //Creating a class which will hold the contents of the simulation
-class SimScene: SKScene{
+class SimScene: SKScene, ObservableObject{
     
     //This method is used to start the moving parts of the simulation when the user presses a button.
     func commenceSimulation(massA: CGFloat, massB: CGFloat,velA: CGFloat, velB: CGFloat, collisionRestitution: CGFloat, ballAngle: CGFloat) -> Void{
