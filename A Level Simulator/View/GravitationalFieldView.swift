@@ -19,11 +19,12 @@ struct GravitationalFieldView: View {
     var body: some View {
         VStack{
             
-            Text("Gravitational Field. Click and drag to add an orbiting object.")
+            Text("Gravtiational Field")
         
         SpriteView(scene: fieldSim)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
-        }
+            
+    
     }
 }
 
@@ -31,4 +32,5 @@ struct GravitatationalFieldView_Previews: PreviewProvider {
     static var previews: some View {
         GravitationalFieldView()
     }
+}
 }
